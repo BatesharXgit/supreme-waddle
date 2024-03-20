@@ -9,6 +9,5 @@ public class Shadowing {
         Shadowing xd = new Shadowing();
         xd.shadowingExample();
         System.out.println(xd.x);
-
     }
 }

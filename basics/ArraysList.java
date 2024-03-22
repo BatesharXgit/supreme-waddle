@@ -7,12 +7,17 @@ public class ArraysList {
         foods.add("Burger");
         foods.add("Sandwich");
 
-        for(String food : foods){
-            System.out.println(food);
+//        for(String food : foods){
+//            System.out.println(food);
+//        }
+        foods.set(1, "Tofu");
+//        foods.clear();
+        for(int i = 0; i < foods.size(); i++){
+            System.out.println(foods.get(i));
         }
-        foods.clear();
-        for(String food1 : foods){
-            System.out.println(food1);
-        }
+
+//        for(String food1 : foods){
+//            System.out.println(food1);
+//        }
     }
 }

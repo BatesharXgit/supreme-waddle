@@ -11,6 +11,5 @@ public class StringToArray {
         }
 
         System.out.println(Arrays.toString(name1));
-
     }
 }

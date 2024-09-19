@@ -6,7 +6,7 @@ public class Arrays {
 //         cars[1] = "BMW";
 //         cars[2] = "Mercedes";
 //         cars[3] = "Porsche";
-         for(int i = 0; i < 4; i++){ //for loop
+         for(int i = 0; i < 2; i++){ //for loop
              System.out.println(cars[i]);
          }
 

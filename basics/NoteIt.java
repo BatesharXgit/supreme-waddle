@@ -8,7 +8,7 @@ class NoteItHome implements ActionListener {
     JFrame frame;
     JMenuBar menuBar;
     JMenu file, edit, help;
-    JMenuItem newFile, openFile, saveFile, cut, copy, paste, selectAll;
+    JMenuItem newFile, openFile, saveFile, cut, copy, paste, selectAll, aboutNoteIt;
     JTextArea textArea;
 
     NoteItHome() {
@@ -30,6 +30,8 @@ class NoteItHome implements ActionListener {
         paste = new JMenuItem("Paste");
         selectAll = new JMenuItem("Select All");
 
+        aboutNoteIt = new JMenuItem("About");
+
         //listeners for file menu items
         newFile.addActionListener(this);
         openFile.addActionListener(this);
@@ -40,6 +42,8 @@ class NoteItHome implements ActionListener {
         copy.addActionListener(this);
         paste.addActionListener(this);
         selectAll.addActionListener(this);
+
+        aboutNoteIt.addActionListener(this);
 
         //creating and assigning theme data to menubar
         menuBar = new JMenuBar();
@@ -65,6 +69,8 @@ class NoteItHome implements ActionListener {
         edit.add(copy);
         edit.add(paste);
         edit.add(selectAll);
+
+        help.add(aboutNoteIt);
 
         menuBar.add(file);
         menuBar.setForeground(fgColor);
@@ -121,6 +127,12 @@ class NoteItHome implements ActionListener {
                 }
             }
         }
+        else if (event.getSource() == aboutNoteIt) {
+            String message = "NoteIt is a text editor,\nMade by Yogesh Bateshar(240010120046).";
+            String title = "About NoteIt";
+            JOptionPane.showMessageDialog(null, message, title, JOptionPane.INFORMATION_MESSAGE);
+        }
+
     }
 }
 
